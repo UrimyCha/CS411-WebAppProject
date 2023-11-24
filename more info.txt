@@ -1,0 +1,9 @@
+I uploaded the frontend, it's not very beautiful but it got all the functions. I also looked for some helpful apis for this project:
+
+https://rapidapi.com/moneals/api/rent-estimate
+https://rapidapi.com/theapiguy/api/walk-score
+
+I also checked the google oauth, but it won't work on my system, i tried multiple times but all failed.
+
+by the way, I guess it will be enough if we just provide users with the housing price&name according to their salary and the walkability score and maybe some temeprature score. Afterall we only need to add 2 apis and one oauth to our project, there is no detailed requirements anyway...
+
