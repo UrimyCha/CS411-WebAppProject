@@ -1,0 +1,18 @@
+{
+  "name": "cs411-webappproject",
+  "version": "1.0.0",
+  "description": "CS 411 Web App Development Project\r Krishna Patel, Li Yuchen, Qianying Guan, Urimy Cha, Gao Yuan",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.2"
+  }
+}
