@@ -1,0 +1,28 @@
+What needs to be mentioned
+Log in page
+- using Google OAuth 2.0, Passport, and MongoDB to handle google account log in
+- There is a middleware between Log in page and the home page to ensure that no user could bypass the log in step
+    - for example, the log in page has the url: http://localhost:3000 and the main page has the url: http://localhost:3000/dashboard, without middleware, by simply adding “/dashboard” to the url, the user can enter the home page without signing in
+    - with middleware, it the user try to bypass log in page, the system will detect it and redirect the user back to log in page
+- using express-session to ensure the user who has logged in before doesn’t have to log in another time
+
+Home page
+- navigation bar with 4 directories: Home page, Latest News page, Search Nearby page, and Logged out page
+- the Home page uses Google Autocomplete API for “Enter Location” part and Rapidapi named “US Real Estate Listing” for the search, it returns a property list for “Rent” based on the parameters passed in
+- When passing in suitable parameters, you’ll get 50 corresponding results
+    - Each result has the address, which has a hyperlink to its listing page, square feet, listing date, listing price, number of bedrooms, number of bathrooms, tags, a description, and an image
+    - Users can choose in what order the results will be shown, the default method is by “relevance”, they also have to choice of “price low to high”, “price high to low”, “newest”
+- Error Handling parts include:
+    - Since all fields are required to search, when there’s a parameter missing, there will be an alert saying: Please fill out all required fields!
+    - If an unreasonable value is passed in, for example, when the minimum bedrooms is 3 and maximum bedrooms is 2, there will be an alert saying: maximum bedrooms cannot be smaller than minimum bedrooms
+    - When there is no result fetched from API, there will also be an alert saying: No Result Found. Try to modify your entries.
+
+Search Nearby Page
+- This page uses Google Place API and Google Autocomplete API, it basically search what’s around the entered location by place type, the search radius is 5km
+- Every result contains a name of the place, which has a hyperlink directs to its google map page, the address and a corresponding image
+
+Latest News Page
+- This page contains 6 articles that is related to the topic of “renting house”, each article has its title, which has a hyperlink directs to the article, the author/provider, a short description, and an image
+
+Log Out Page
+- log you out, direct you to log in page
